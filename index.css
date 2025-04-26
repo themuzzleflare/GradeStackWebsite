@@ -1,13 +1,13 @@
 div#headerSection {
-	background-color: silver;
+	background-color: #F8F8F8;
 }
 
 div#appDetails {
-	padding: 5px;
+	padding: 25px;
 }
 
 div#footerSection {
-	background-color: silver;
+	background-color: #F8F8F8;
 }
 
 img#logo {
