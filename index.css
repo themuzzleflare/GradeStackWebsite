@@ -1,0 +1,15 @@
+div#headerSection {
+	background-color: silver;
+}
+
+div#appDetails {
+	padding: 5px;
+}
+
+div#footerSection {
+	background-color: silver;
+}
+
+img#logo {
+	padding: 10px;
+}
