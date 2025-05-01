@@ -6,7 +6,13 @@ div#header {
 }
 
 h1#title {
-	margin-bottom: 0;
+	color: black;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+p#subtitle {
+	margin-top: 0px;
 }
 
 .carousel-control-prev-icon {
@@ -20,6 +26,7 @@ h1#title {
 }
 
 div#description {
+	margin-top: 10px;
 	color: black;
 }
 

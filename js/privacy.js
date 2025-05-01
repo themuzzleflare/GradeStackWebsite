@@ -1,5 +1,4 @@
 function applyTheme(e) {
-	console.log("applyTheme");
 	const isDarkMode = e.matches;
 	document.documentElement.style.backgroundColor = isDarkMode ? 'black' : 'white';
 	document.documentElement.style.color = isDarkMode ? 'white' : 'black';
