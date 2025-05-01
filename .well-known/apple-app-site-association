@@ -1,0 +1,13 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appID": "JDL5FY6SCC.cloud.tavitian.gradestack",
+                "paths": [
+                    "NOT /_/*",
+                    "/*"
+                ]
+            }
+        ]
+    }
+}
