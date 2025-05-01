@@ -1,76 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFMN1VVWVT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-SFMN1VVWVT');
+    </script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GradeStack</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GradeStack" />
+    <link rel="manifest" href="site.webmanifest" />
   </head>
+  
   <header>
-    <div class="container-fluid" id="headerSection" align="center">
-      <img src="img/logo.png" id="logo" width="128" height="128"/>
-      <h3 id="gradestackTitle">GradeStack</h3>
-      <h6 id="gradestackSubtitle">Academic Planner</h6>
+    <div id="header">
+      <!-- App icon embed -->
+      <a href="https://apps.apple.com/au/app/gradestack/id6743357513?itscg=30200&itsct=apps_box_artwork&mttnsubad=6743357513" style="position: relative; width: 170px; height: 170px; overflow: hidden; display: inline-block; vertical-align: middle; 
+    --app-icon-mask: url('data:image/svg+xml,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20viewBox%3D%220%200%20230.5%20230.5%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%221.4%22%20clip-rule%3D%22evenodd%22%20d%3D%22M158.2%20230H64.1a320%20320%200%200%201-7-.1c-5%200-10-.5-15-1.3a50.8%2050.8%200%200%201-14.4-4.8%2048.2%2048.2%200%200%201-21-21%2050.9%2050.9%200%200%201-4.8-14.4%20100.7%20100.7%200%200%201-1.3-15v-7l-.1-8.2V64.1a320%20320%200%200%201%20.1-7c0-5%20.5-10%201.3-15a50.7%2050.7%200%200%201%204.8-14.4%2048.2%2048.2%200%200%201%2021-21%2051%2051%200%200%201%2014.4-4.8c5-.8%2010-1.2%2015-1.3a320%20320%200%200%201%207%200l8.2-.1h94.1a320%20320%200%200%201%207%20.1c5%200%2010%20.5%2015%201.3a52%2052%200%200%201%2014.4%204.8%2048.2%2048.2%200%200%201%2021%2021%2050.9%2050.9%200%200%201%204.8%2014.4c.8%205%201.2%2010%201.3%2015a320%20320%200%200%201%20.1%207v102.3l-.1%207c0%205-.5%2010-1.3%2015a50.7%2050.7%200%200%201-4.8%2014.4%2048.2%2048.2%200%200%201-21%2021%2050.8%2050.8%200%200%201-14.4%204.8c-5%20.8-10%201.2-15%201.3a320%20320%200%200%201-7%200l-8.2.1z%22%2F%3E%0A%3C%2Fsvg%3E%0A');">
+        
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6b/5d/47/6b5d474f-d9fb-43fc-43e5-5e0e115334e3/AppIcon-0-1x_U007epad-0-11-0-P3-85-220-0.png/540x540bb.jpg" alt="GradeStack"
+          style="width: 100%; height: 100%; object-fit: contain;
+            mask-image: var(--app-icon-mask); -webkit-mask-image: var(--app-icon-mask);" />
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.5 230.5" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; box-sizing: border-box;">
+          <path fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="1.4" stroke-opacity=".1" stroke-width="1" d="M158.2 230H64.1a320 320 0 0 1-7-.1c-5 0-10-.5-15-1.3a50.8 50.8 0 0 1-14.4-4.8 48.2 48.2 0 0 1-21-21 50.9 50.9 0 0 1-4.8-14.4 100.7 100.7 0 0 1-1.3-15v-7l-.1-8.2V64.1a320 320 0 0 1 .1-7c0-5 .5-10 1.3-15a50.7 50.7 0 0 1 4.8-14.4 48.2 48.2 0 0 1 21-21 51 51 0 0 1 14.4-4.8c5-.8 10-1.2 15-1.3a320 320 0 0 1 7 0l8.2-.1h94.1a320 320 0 0 1 7 .1c5 0 10 .5 15 1.3a52 52 0 0 1 14.4 4.8 48.2 48.2 0 0 1 21 21 50.9 50.9 0 0 1 4.8 14.4c.8 5 1.2 10 1.3 15a320 320 0 0 1 .1 7v102.3l-.1 7c0 5-.5 10-1.3 15a50.7 50.7 0 0 1-4.8 14.4 48.2 48.2 0 0 1-21 21 50.8 50.8 0 0 1-14.4 4.8c-5 .8-10 1.2-15 1.3a320 320 0 0 1-7 0l-8.2.1z" clip-rule="evenodd" vector-effect="non-scaling-stroke"/>
+        </svg>
+      </a>
+      
+      <h1 id="title">GradeStack</h1>
+      <p id="subtitle">Academic Planner</p>
+      
+      <!-- Download link embed -->
+      <a href="https://apps.apple.com/au/app/gradestack/id6743357513?itscg=30200&itsct=apps_box_badge&mttnsubad=6743357513" style="display: inline-block;">
+        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1745884800" alt="Download on the App Store" style="width: 246px; height: 52px; vertical-align: middle; object-fit: contain;" />
+      </a>
     </div>
   </header>
+  
   <body>
-    <div id="screenshotsCarousel" class="carousel slide" align="center">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/mapacademicjourney.png" height="500">
+    <div class="container" id="body">
+      <div id="screenshotsCarousel" class="carousel slide" align="center">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/mapacademicjourney.png" class="d-block w-50">
+          </div>
+          <div class="carousel-item">
+            <img src="img/stayontopofschedule.png" class="d-block w-50">
+          </div>
+          <div class="carousel-item">
+            <img src="img/keeptrackofassessments.png" class="d-block w-50">
+          </div>
+          <div class="carousel-item">
+            <img src="img/customgradingscales.png" class="d-block w-50">
+          </div>
+          <div class="carousel-item">
+            <img src="img/cloudsync.png" class="d-block w-50">
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="img/stayontopofschedule.png" height="500">
-        </div>
-        <div class="carousel-item">
-          <img src="img/keeptrackofassessments.png" height="500">
-        </div>
-        <div class="carousel-item">
-          <img src="img/customgradingscales.png" height="500">
-        </div>
-        <div class="carousel-item">
-          <img src="img/cloudsync.png" height="500">
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      
+      <div id="description">
+        <h1 id="gradestack-your-ultimate-university-companion">GradeStack: Your Ultimate University Companion</h1>
+        <p>GradeStack is the all-in-one academic planner designed to empower university and college students to master their academic journey with ease and precision. Organise your semesters, subjects, assessments, classes, and more while staying on top of your grades and productivity.</p>
+        <h2 id="key-features">Key Features</h2>
+        <ul>
+          <li><strong>Plan Your Academic Life</strong>: Input semester details (start/end dates), subjects (with credit points), assessments (weights, due dates, results), and classes (single or recurring). Customize class types (lectures, tutorials, etc.), assign teachers, and set holidays that can automatically shift intersecting classes.</li>
+          <li><strong>Real-Time Grade Tracking</strong>: Automatically calculate grades per subject, semester, and overall, with support for Weighted Average Mark (WAM) and Grade Point Average (GPA). Define custom grading scales, GPA systems, and exclude subjects or override grades as needed.</li>
+          <li><strong>Stay Productive</strong>: View upcoming classes and assessments at a glance. Custom gauges display completed vs. remaining tasks, while graphs track your subject marks over time as assessments are completed.</li>
+          <li><strong>Flexible Grading Modes</strong>: Toggle between ascending (start at 0%, build up) and descending (start at 100%, deduct) grading modes to see instant recalculations tailored to your preference.</li>
+          <li><strong>Smart Scheduling</strong>: Configure single or repeating classes with custom recurrence rules. Assign class types and teachers (manually or from system contacts). Visualise your schedule in a Calendar view, with day or week timelines showing classes and assessments.</li>
+          <li><strong>Cloud Sync</strong>: Seamlessly back up and sync your data between iOS and macOS devices for a unified experience.</li>
+        </ul>
+        <h2 id="premium-features">Premium Features</h2>
+        <ul>
+          <li>Unlock WAM and GPA views, complete with dedicated widgets for quick access.</li>
+          <li>Import/export data to JSON files for easy backups or transfers.</li>
+          <li>Receive customisable notifications for classes and assessments, set globally or individually.</li>
+          <li>Integrate with your system calendar to export classes and their recurrences as events.</li>
+        </ul>
+        <p>GradeStack is the ultimate academic companion, helping you plan, track, and succeed with confidence. Download now and take control of your university journey!</p>
+      </div>
     </div>
-    <div id="appDetails">
-      <h1 id="gradestack-your-ultimate-university-companion">GradeStack: Your Ultimate University Companion</h1>
-      <p>GradeStack is the all-in-one academic planner designed to empower university and college students to master their academic journey with ease and precision. Organise your semesters, subjects, assessments, classes, and more while staying on top of your grades and productivity.</p>
-      <h2 id="key-features">Key Features</h2>
-      <ul>
-        <li><strong>Plan Your Academic Life</strong>: Input semester details (start/end dates), subjects (with credit points), assessments (weights, due dates, results), and classes (single or recurring). Customize class types (lectures, tutorials, etc.), assign teachers, and set holidays that can automatically shift intersecting classes.</li>
-        <li><strong>Real-Time Grade Tracking</strong>: Automatically calculate grades per subject, semester, and overall, with support for Weighted Average Mark (WAM) and Grade Point Average (GPA). Define custom grading scales, GPA systems, and exclude subjects or override grades as needed.</li>
-        <li><strong>Stay Productive</strong>: View upcoming classes and assessments at a glance. Custom gauges display completed vs. remaining tasks, while graphs track your subject marks over time as assessments are completed.</li>
-        <li><strong>Flexible Grading Modes</strong>: Toggle between ascending (start at 0%, build up) and descending (start at 100%, deduct) grading modes to see instant recalculations tailored to your preference.</li>
-        <li><strong>Smart Scheduling</strong>: Configure single or repeating classes with custom recurrence rules. Assign class types and teachers (manually or from system contacts). Visualise your schedule in a Calendar view, with day or week timelines showing classes and assessments.</li>
-        <li><strong>Cloud Sync</strong>: Seamlessly back up and sync your data between iOS and macOS devices for a unified experience.</li>
-      </ul>
-      <h2 id="premium-features">Premium Features</h2>
-      <ul>
-        <li>Unlock WAM and GPA views, complete with dedicated widgets for quick access.</li>
-        <li>Import/export data to JSON files for easy backups or transfers.</li>
-        <li>Receive customisable notifications for classes and assessments, set globally or individually.</li>
-        <li>Integrate with your system calendar to export classes and their recurrences as events.</li>
-      </ul>
-      <p>GradeStack is the ultimate academic companion, helping you plan, track, and succeed with confidence. Download now and take control of your university journey!</p>
-    </div>
+    
+    <script src="js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
+  
   <footer>
-    <div class="container-fluid" id="footerSection" align="center">
+    <div id="footer">
       <a href="mailto:support@gradestack.com.au">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
