@@ -3,9 +3,21 @@
         "details": [
             {
                 "appID": "JDL5FY6SCC.cloud.tavitian.gradestack",
-                "paths": [
-                    "NOT /_/*",
-                    "/*"
+                "components": [
+                    {
+                        "/": "/privacy",
+                        "exclude": true,
+                        "comment": "Exclude the privacy policy page from universal links."
+                    },
+                    {
+                        "/": "/privacy.html",
+                        "exclude": true,
+                        "comment": "Exclude the privacy policy page from universal links."
+                    },
+                    {
+                        "/": "/*",
+                        "comment": "Matches all pages."
+                    }
                 ]
             }
         ]
