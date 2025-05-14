@@ -1,8 +1,17 @@
 div#header {
-	text-align: center;
 	background-color: #F8F8F8;
 	padding: 20px;
 	border-bottom: 1px solid lightgrey;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+div#title-subtitle {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 h1#title {
@@ -13,7 +22,11 @@ h1#title {
 
 div#subtitle {
 	margin-top: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
+}
+
+div#body {
+	min-height: 100vh;
 }
 
 .carousel-control-prev-icon {
@@ -27,7 +40,7 @@ div#subtitle {
 }
 
 div#description {
-	margin-top: 10px;
+	margin-top: 50px;
 	color: black;
 }
 
@@ -39,5 +52,14 @@ div#footer {
 }
 
 div#copyright-abn {
+	font-size: smaller;
+	color: black;
+}
+
+a#contact {
+	font-size: small;
+}
+
+a#privacy {
 	font-size: small;
 }
