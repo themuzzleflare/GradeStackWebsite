@@ -7,12 +7,13 @@ div#header {
 
 h1#title {
 	color: black;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 }
 
-p#subtitle {
+div#subtitle {
 	margin-top: 0px;
+	margin-bottom: 5px;
 }
 
 .carousel-control-prev-icon {
@@ -31,8 +32,12 @@ div#description {
 }
 
 div#footer {
-	background-color: #F8F8F8;
 	text-align: center;
+	background-color: #F8F8F8;
 	padding: 20px;
 	border-top: 1px solid lightgrey;
+}
+
+div#copyright-abn {
+	font-size: small;
 }
