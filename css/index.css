@@ -31,6 +31,11 @@ html {
   scroll-behavior: smooth;
 }
 
+main section[id],
+[data-policy-section] {
+  scroll-margin-top: 8rem;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -600,6 +605,10 @@ select {
   align-items: center;
 }
 
+.showcase-panel {
+  min-width: 0;
+}
+
 .showcase-list {
   display: grid;
   gap: 0.85rem;
@@ -949,6 +958,10 @@ select {
     min-height: 34rem;
   }
 
+  .showcase-panel {
+    order: -1;
+  }
+
   .feature-card {
     grid-column: span 6;
   }
@@ -972,15 +985,67 @@ select {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .nav-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
   .site-nav {
-    width: 100%;
+    grid-column: 1 / -1;
+    flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: 0.9rem 1.1rem;
+    gap: 0.7rem;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar,
+  .policy-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 0.72rem 0.95rem;
+    border: 1px solid rgba(16, 37, 66, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(16px);
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+  .hero-grid,
+  .showcase-grid,
+  .premium-shell,
+  .cta-card,
+  .policy-hero-grid,
+  .policy-layout {
+    gap: 1.5rem;
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.6rem, 14vw, 3.8rem);
+    max-width: none;
+  }
+
+  .hero-copy > p,
+  .section-heading p,
+  .showcase-copy p,
+  .premium-copy p,
+  .cta-copy p,
+  .policy-hero-copy p {
+    font-size: 1rem;
   }
 
   .hero-visual {
@@ -989,21 +1054,25 @@ select {
     gap: 1rem;
   }
 
+  .hero-device {
+    width: 100%;
+  }
+
   .floating-card,
   .app-pill {
     position: static;
     max-width: none;
   }
 
-  .trust-grid,
-  .workflow-grid,
+  .feature-grid,
   .premium-grid,
-  .policy-nav {
+  .trust-grid,
+  .workflow-grid {
     grid-template-columns: 1fr;
   }
 
   .feature-card {
-    grid-column: span 12;
+    grid-column: 1 / -1;
   }
 
   .showcase-trigger {
@@ -1018,12 +1087,292 @@ select {
     transform: none;
   }
 
+  .policy-nav {
+    display: flex;
+    gap: 0.7rem;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-width: none;
+  }
+
+  .policy-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 760px) {
+  main section[id],
+  [data-policy-section] {
+    scroll-margin-top: 6rem;
+  }
+
+  .container {
+    width: min(var(--container), calc(100% - 1.25rem));
+  }
+
+  .site-header {
+    padding: 0.75rem 0;
+  }
+
+  .site-nav {
+    gap: 0.55rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.45rem, 13vw, 3.4rem);
+    line-height: 1.01;
+  }
+
+  .brand-mark,
+  .footer-logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .button,
+  .button-small {
+    min-height: 3rem;
+    padding: 0.9rem 1.15rem;
+  }
+
+  .hero-actions,
+  .policy-summary-actions,
+  .cta-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .button,
+  .policy-summary-actions .button,
+  .cta-actions > * {
+    width: 100%;
+  }
+
+  .hero-highlights {
+    gap: 0.8rem;
+  }
+
+  .hero-highlights li {
+    font-size: 0.98rem;
+  }
+
+  .hero-note,
+  .info-card,
+  .feature-card,
+  .premium-card,
+  .workflow-card,
+  .policy-summary,
+  .policy-card,
+  .policy-nav a,
+  .showcase-trigger {
+    border-radius: 1.3rem;
+  }
+
+  .hero-note,
+  .info-card,
+  .feature-card,
+  .premium-card,
+  .workflow-card {
+    padding: 1.2rem;
+  }
+
+  .hero-device,
+  .showcase-frame,
+  .premium-shell,
+  .cta-card,
+  .policy-card {
+    padding: 0.85rem;
+    border-radius: 1.5rem;
+  }
+
+  .hero-device img,
+  .screen-stage img {
+    border-radius: 1.15rem;
+    aspect-ratio: 4 / 3;
+  }
+
+  .app-pill {
+    padding: 0.85rem 0.95rem;
+  }
+
+  .info-card h2,
+  .feature-card h3,
+  .premium-card h3,
+  .workflow-card h3,
+  .screen-meta-copy h3,
+  .policy-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .section-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-heading h2,
+  .showcase-copy h2,
+  .premium-copy h2,
+  .cta-copy h2,
+  .policy-hero-copy h1 {
+    font-size: clamp(1.95rem, 9vw, 2.6rem);
+    line-height: 1.08;
+  }
+
+  .showcase-list {
+    gap: 0.7rem;
+    margin-top: 1.35rem;
+  }
+
+  .showcase-trigger {
+    padding: 0.9rem 0.95rem;
+    gap: 0.8rem;
+  }
+
+  .showcase-step,
+  .screen-counter,
+  .workflow-step,
+  .hero-note-label,
+  .info-kicker,
+  .floating-label {
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+  }
+
   .app-store-badge img {
-    width: 11rem;
+    width: min(100%, 11.25rem);
+  }
+
+  .app-store-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-card {
+    padding: 1.25rem;
+  }
+
+  .cta-details {
+    padding: 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .footer-shell {
+    display: grid;
+    justify-content: stretch;
+    gap: 1.25rem;
   }
 
   .footer-brand {
     align-items: flex-start;
+  }
+
+  .policy-summary {
+    padding: 1.2rem;
+  }
+
+  .policy-summary time {
+    font-size: 1.25rem;
+  }
+
+  .policy-card {
+    padding: 1.2rem;
+  }
+
+  .policy-card section + section {
+    margin-top: 1.65rem;
+    padding-top: 1.65rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .site-header {
+    position: static;
+  }
+
+  .nav-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .button-small {
+    width: 100%;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .site-nav a,
+  .policy-nav a {
+    padding: 0.68rem 0.88rem;
+    font-size: 0.92rem;
+  }
+
+  .hero-section {
+    padding-top: 2.75rem;
+  }
+
+  .section {
+    padding: 3.4rem 0;
+  }
+
+  .hero-copy > p,
+  .section-heading p,
+  .showcase-copy p,
+  .premium-copy p,
+  .cta-copy p,
+  .policy-hero-copy p,
+  .policy-card p,
+  .policy-card li {
+    line-height: 1.65;
+  }
+
+  .hero-highlights li {
+    padding-left: 1.45rem;
+    font-size: 0.94rem;
+  }
+
+  .hero-highlights li::before {
+    width: 0.68rem;
+    height: 0.68rem;
+    top: 0.45rem;
+  }
+
+  .showcase-trigger {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-step {
+    margin-bottom: 0.1rem;
+  }
+
+  .screen-meta {
+    padding: 0.85rem 0.1rem 0;
+  }
+
+  .premium-shell,
+  .cta-card {
+    padding: 1rem;
+  }
+
+  .footer-brand {
+    gap: 0.8rem;
+  }
+
+  .footer-links {
+    gap: 0.75rem;
   }
 }
 
